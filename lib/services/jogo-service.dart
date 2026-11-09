@@ -1,9 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:gerenciador_jogos/models/jogo.dart';
+import 'package:gerenciador_jogos/services/login-service.dart';
 
 class JogoService {
   static CollectionReference<Map<String, dynamic>> get _jogos {
-    return FirebaseFirestore.instance.collection('jogos');
+    return FirebaseFirestore.instance
+        .collection('usuarios')
+        .doc(LoginService.usuarioLogado!.uid)
+        .collection('jogos');
   }
 
   static Stream<List<Jogo>> listarJogos() {
