@@ -34,7 +34,6 @@ gerenciador_jogos_flutter/
 └── README.md            # Este arquivo
 ```
 
-A documentação técnica do código (pastas, classes e fluxo do app) está em [`gerenciador_jogos/README.md`](gerenciador_jogos/README.md).
 
 ## Como executar
 
