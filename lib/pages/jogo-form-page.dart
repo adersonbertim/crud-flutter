@@ -16,6 +16,16 @@ class _JogoFormPage extends State<JogoFormPage> {
   final plataformaController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    if (widget.jogo != null) {
+      nomeController.text = widget.jogo!.nome;
+      notaController.text = widget.jogo!.nota.toString();
+      plataformaController.text = widget.jogo!.plataforma;
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Formulário de Jogo')),

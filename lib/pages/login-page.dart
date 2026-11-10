@@ -38,6 +38,8 @@ class LoginPageState extends State<LoginPage> {
         showMensagem('Usuário ou senha inválidos');
       } else if (erro.code == 'invalid-email') {
         showMensagem('E-mail com formato inválido');
+      } else if (emailController.text.isEmpty || senhaController.text.isEmpty) {
+        showMensagem('Por favor, preencha todos os campos.');
       } else {
         showMensagem('Erro ao fazer login: ${erro.code}');
       }

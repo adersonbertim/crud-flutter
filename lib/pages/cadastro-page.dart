@@ -32,6 +32,8 @@ class _CadastroPageState extends State<CadastroPage> {
         showMensagem('A senha fornecida é muito fraca.');
       } else if (e.code == 'email-already-in-use') {
         showMensagem('O e-mail fornecido já está em uso.');
+      } else if (e.code == 'invalid-email') {
+        showMensagem('O e-mail fornecido é inválido.');
       } else {
         showMensagem('Erro ao cadastrar usuário: ${e.message}');
       }
